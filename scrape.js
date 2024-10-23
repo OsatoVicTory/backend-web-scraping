@@ -63,6 +63,7 @@ exports.scrape = async (req, res) => {
     res.status(200).json(response);
 
     } catch (err) {
+        console.log(err.message);
         res.status(500).json({ status: 'failed', message: err.message });
     }
 };
