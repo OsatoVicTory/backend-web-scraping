@@ -9,6 +9,7 @@ exports.scrape = async (req, res) => {
     try {
     const browser = await puppeteer.launch({
         headless: true,
+        timeout:  0,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
